@@ -1,0 +1,12 @@
+name: 'Replaces $PLACEHOLDERS in files'
+description: 'Greet someone and record the time'
+inputs:
+  files:  # id of input
+    description: 'Files, comma-separated. Supposed PLACEHOLDER in them'
+    required: true
+  replacements:  # id of input
+    description: 'Comma-separated pairs PLACEHOLDER=value'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
