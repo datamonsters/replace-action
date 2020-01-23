@@ -1,10 +1,14 @@
-name: 'Replaces $PLACEHOLDERS in files'
-description: 'Greet someone and record the time'
+name: 'Replace Action'
+description: 'Replaces substrings in files. Useful to enrich configs with previuos steps artifacts.'
+author: Data Monsters
+branding:
+  icon: 'repeat'  
+  color: 'green'
 inputs:
-  files:  # id of input
+  files:
     description: 'Files, comma-separated. Supposed PLACEHOLDER in them'
     required: true
-  replacements:  # id of input
+  replacements:
     description: 'Comma-separated pairs PLACEHOLDER=value'
     required: true
 runs:
