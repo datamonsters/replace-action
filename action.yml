@@ -1,5 +1,5 @@
 name: 'Replace Action'
-description: 'Replaces substrings in files. Useful to enrich configs with previuos steps artifacts.'
+description: 'Replaces substrings in files. Useful to enrich configs with previous steps artifacts.'
 author: Data Monsters
 branding:
   icon: 'repeat'  
