@@ -4,7 +4,7 @@ try {
   const files = core.getInput('files');
   const vars_string = core.getInput('replacements');
   var filenames = files.replace(' ', '').split(',')
-  var vars = vars_string.replace(' ', '').split(',')
+  var vars = vars_string.split(',')
   console.log('files l:'+ filenames.length)
   for(var fi = 0; fi < filenames.length; fi++)
   {
@@ -19,10 +19,10 @@ try {
         console.log(data)
         for(var i = 0; i < vars.length; i++)
         {
-          var kv = vars[i].split('=')
-          var key = kv[0]
-          var value = kv[1]
-          result = result.replace(key, value)
+          var firstEqual = vars[i].indexOf('=');
+    	  var key = vars[i].substr(0,firstEqual);
+    	  var value = vars[i].substr(firstEqual+1);
+    	  result = result.replace(key, value)
         }
         console.log('file2: '+filename)
         fs.writeFile(filename, result, 'utf8', function (err) {
