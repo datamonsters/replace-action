@@ -1,6 +1,6 @@
 # replace-action
 
-This lightweight action replaces substrings in files. It is useful for CI process when you needto update your configs depending on the previous steps results.
+This lightweight action replaces substrings in files. It is useful for CI process when you need to update your configs depending on the previous steps results.
 
 # Usage
 
@@ -11,8 +11,9 @@ See [action.yml](action.yml)
 uses: datamonsters/replace-action
 with:
   files: 'path1/file1,path2/file2'
-  replacements: 'foo=bar,$FOO=Bar_Value'
+  replacements: 'foo=bar,@FOO=Bar_Value'
 ```
+As the replacement is using regular expression, you should avoid 'special' characters which might be misinterpreted in the RegEx context.
 
 # Example
 
