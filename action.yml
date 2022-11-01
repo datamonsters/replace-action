@@ -12,5 +12,5 @@ inputs:
     description: 'Comma-separated pairs PLACEHOLDER=value'
     required: true
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'index.js'
